@@ -15,7 +15,7 @@ run_as() {
     if [ "$(id -u)" = 0 ]; then
         su -p www-data -s /bin/sh -c "$1"
     else
-        sudo -u 1000 sh -c "$1"
+        sudo -u $(id -un -- "1000") sh -c "$1"
     fi
 }
 
