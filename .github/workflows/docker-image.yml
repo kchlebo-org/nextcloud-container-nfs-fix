@@ -27,4 +27,4 @@ jobs:
         run: |
           docker buildx build \
             --tag kchlebo/nextcloud-container-nfs-fix-apache:latest \
-            --platform linux/amd64,linux/arm/v7,linux/arm64 .
+            --platform linux/amd64,linux/arm/v7,linux/arm64, linux/arm64/v8 .
