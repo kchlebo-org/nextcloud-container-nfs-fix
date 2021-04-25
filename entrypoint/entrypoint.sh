@@ -13,10 +13,9 @@ directory_empty() {
 
 run_as() {
     if [ "$(id -u)" = 0 ]; then
-        sudo chown -R www-data:www-data ./*
         su -p www-data -s /bin/sh -c "$1"
     else
-        sudo -u www-data sh -c "$1"
+        sh -c "$1"
     fi
 }
 
